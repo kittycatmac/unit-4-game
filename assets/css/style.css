@@ -1,0 +1,36 @@
+.comtainer {
+    position: relative;
+   
+}
+img  {
+    width: 40%;
+    height: 40%;
+}
+
+.power-crystal {
+    width: 30%;
+    height: 30%;
+    z-index: -1;
+}
+
+.hit {
+    position: absolute;
+    color: whitesmoke;
+    text-align: center;
+    left: 10px;
+    top: 40%;
+    width: 10%;
+    height: 10%;
+    font-size: 50px
+}
+
+button {
+    width: 20%;
+    height: 30%;
+    padding: 0%;
+}
+
+.four-crystal {
+    box-sizing: border-box;
+}
+
