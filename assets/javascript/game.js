@@ -1,31 +1,39 @@
+
 $(function() {
     setRandomNumber();
     setCrystalValues();
-
     $('[id^="button"]').click(function() {
         handleCrystalClick($(this));
+        //$('#' + button.id).data().value.hide();
     });
 });
+    //hide value not working ERROR^^^// check jquery activity 12!
+    //$(this).hide();
 var powerCrystal = 0;
 var crystalScore = 0;
 var wins = 0;
 var losses = 0;
-var i = 0;
-var button = document.getElementById("buttons");
+var button = 0;
+//var value = document.getElementById("buttons");
 
 //setting the Power crystal number
 function setRandomNumber() {
-    powerCrystal = Math.floor(Math.random() * 101) + 19;
+    powerCrystal = Math.floor(Math.random() * 100) + 1;
     $('.hit').html(powerCrystal);
 }
 //setting the four crystals random value
 function setCrystalValues() {
    var buttons = $('[id^="button"]');
-   $.each(buttons,function(i, button) {
+   $.each(buttons,function(_i, button) {
        $('#' + button.id).data().value = Math.floor(Math.random() * 15) + 1;
+       //var imageCrystal = $("<img>");
+       //imageCrystal.addClass("img");
+       //imageCrystal.attr("assets/images/Bismuth-Crystal-4.jpg");
+       //$("button").append(imageCrystal);
+     });
     
-   });
 }
+
 //adding and then compareing the value to power crystal
 function handleCrystalClick($this) {
     var value = $this.data().value;
@@ -53,7 +61,7 @@ function resetCurrentGuess() {
 
 
 
-
+//scratch
 /*powerCrystal = document.getElementById('power-crystal');
 $(document).ready(function() {
     $(".power-crystal").on("click", function() {
