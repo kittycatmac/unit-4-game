@@ -26,13 +26,16 @@ function setCrystalValues() {
    var buttons = $('[id^="button"]');
    $.each(buttons,function(_i, button) {
        $('#' + button.id).data().value = Math.floor(Math.random() * 15) + 1;
-       //var imageCrystal = $("<img>");
-       //imageCrystal.addClass("img");
-       //imageCrystal.attr("assets/images/Bismuth-Crystal-4.jpg");
-       //$("button").append(imageCrystal);
      });
-    
 }
+
+//trying to fix the value replacing image
+function replaceButton() {
+    var imageCrystal = $("<img>");
+    imageCrystal.addClass("img");
+    imageCrystal.attr("images/Bismuth-Crystal-4.jpg");
+    $("button").append(imageCrystal);
+}    
 
 //adding and then compareing the value to power crystal
 function handleCrystalClick($this) {
