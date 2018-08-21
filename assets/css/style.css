@@ -1,40 +1,64 @@
-body {
+* {
     box-sizing: border-box;
 }
-.comtainer {
-    position: relative;
-   
+
+.header {
+    text-align: center;
 }
 
 img  {
     width: 40%;
     height: 40%;
+    
 }
 
 .powerCrystal {
-    width: 30%;
+    width: 20%;
     height: 30%;
     z-index: -1;
+    float: left;
+    width: 30%;
+    position: relative;
 }
 
 .hit {
     position: absolute;
     color: whitesmoke;
     text-align: center;
-    left: 10px;
-    top: 35%;
+    left: 50px;
+    top: 50%;
     width: 10%;
     height: 10%;
     font-size: 50px
 }
 
+.rules {
+    float: left;
+    width: 70%;
+    padding: 15px;
+}
+
+.lossWin {
+    float: left;
+    width: 40%;
+    padding: 10px;
+}
+
+.yourScore {
+    float: left;
+    width: 60%;
+    padding: 0%;
+}
+
 button {
-    width: 20%;
+    width: 15%;
     height: 30%;
     padding: 0%;
 }
 
 .four-crystal {
     box-sizing: border-box;
+    width: 100%;
+    float: left;
 }
 
