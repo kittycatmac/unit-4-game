@@ -2,18 +2,23 @@
 $(function() {
     setRandomNumber();
     setCrystalValues();
+
     $('[id^="button"]').click(function() {
+        console.log(this)
         handleCrystalClick($(this));
+
+    /*$('[id^="button"]').click(function() {
+        handleCrystalClick($(this));*/
         //$('#' + button.id).data().value.hide();
     });
 });
     //hide value not working ERROR^^^// check jquery activity 12!
-    //$(this).hide();
+    //$(this,//but no Object).hide();
 var powerCrystal = 0;
 var crystalScore = 0;
 var wins = 0;
 var losses = 0;
-var button = 0;
+//var button = 0;
 //var value = document.getElementById("buttons");
 
 //setting the Power crystal number
@@ -23,6 +28,15 @@ function setRandomNumber() {
 }
 //setting the four crystals random value
 function setCrystalValues() {
+    var numberOptions = Math.floor(Math.random() * 15) + 1;
+    for (var i =0; i < numberOptions.length; i++) {
+        var imageCrystal = $("<img>");
+        imageCrystal.addClass("crystal-img");
+        imageCrystal.attr("src", "assets/images/Bismuth-Crystal-4.jpg");
+        imageCrystal.attr("data-crystalvalu", numberOptions[i]);
+        $("#crystal").append(imageCrystal);
+    }
+//button version    
    var buttons = $('[id^="button"]');
    $.each(buttons,function(_i, button) {
        $('#' + button.id).data().value = Math.floor(Math.random() * 15) + 1;
@@ -30,18 +44,19 @@ function setCrystalValues() {
 }
 
 //trying to fix the value replacing image
-function replaceButton() {
-    var imageCrystal = $("<img>");
-    imageCrystal.addClass("img");
-    imageCrystal.attr("images/Bismuth-Crystal-4.jpg");
-    $("button").append(imageCrystal);
-}    
+//function replaceButton() {
+    //var imageCrystal = $("<img>");
+    //imageCrystal.addClass("img");
+    //imageCrystal.attr("images/Bismuth-Crystal-4.jpg");
+    //$("button").append(imageCrystal);
+//}    
 
 //adding and then compareing the value to power crystal
 function handleCrystalClick($this) {
+    console.log($this)
     var value = $this.data().value;
     crystalScore += value;
-    $('.crystalScore').html(crystalScore);
+    $('#crystalScore').html(crystalScore);
     evaluate();
 }
 //check win or loose
