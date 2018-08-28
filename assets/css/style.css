@@ -67,3 +67,71 @@ button {
     padding: 0%;
 }
 
+@media only screen and (max-width: 600px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    .header {
+        text-align: center;
+    }
+    
+    img {
+        width: 40%;
+        height: 40%;
+    }
+    
+    .powerCrystal {
+        width: 20%;
+        height: 50%;
+        z-index: -1;
+        float: left;
+        width: 30%;
+        position: relative;
+    }
+    
+    .hit {
+        position: relative;
+        color: blueviolet;
+        text-align: center;
+        left: 10px;
+        top: 50%;
+        font-size: 40px
+    }
+    
+    .rules {
+        float: left;
+        width: 70%;
+        padding: 15px;
+    }
+    
+    .lossWin {
+        float: left;
+        width: 40%;
+        padding: 10px;
+    }
+    
+    .yourScore {
+        float: left;
+        width: 60%;
+        padding: 0%;
+    }
+    
+    button {
+        width: 25%;
+        height: 25%;
+        padding: 0%;
+    }
+    
+    .four-crystal {
+        box-sizing: border-box;
+        width: 100%;
+        float: left;
+    }
+    
+    .crystalScore {
+        width: 20%;
+        height: 25%;
+        padding: 0%;
+    }
+}
